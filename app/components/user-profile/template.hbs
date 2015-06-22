@@ -1,0 +1,19 @@
+<header class="page-header" role="banner">
+  <div class="container">
+    <h1 class="logo">{{name}}</h1>
+  </div>
+</header>
+{{!-- /.page-header --}}
+
+<div class="main" role="main">
+  <div class="container">
+    <p>{{user.statement}}</p>
+
+    <ul class="social-links">
+      {{#each user.socialLinks as |socialLink|}}
+        {{social-link class="social-link" onMouseEnter="setActiveSocial" onMouseLeave="resetActiveSocial" socialLink=socialLink tagName="li"}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+{{!-- /.main --}}
