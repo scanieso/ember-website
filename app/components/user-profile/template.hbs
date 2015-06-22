@@ -7,9 +7,9 @@
 
 <div class="main" role="main">
   <div class="container">
-    <p>{{user.statement}}</p>
+    <p class="text-h2">{{user.statement}}</p>
 
-    <ul class="social-links">
+    <ul class="social-links list-inline">
       {{#each user.socialLinks as |socialLink|}}
         {{social-link class="social-link" onMouseEnter="setActiveSocial" onMouseLeave="resetActiveSocial" socialLink=socialLink tagName="li"}}
       {{/each}}

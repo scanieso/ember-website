@@ -1,18 +1,23 @@
 // Colors
 // ---------------------------------------
 
-$blue: blue;
+$blue: darkturquoise;
 
 $gray: #999;
 
-$color-body: #000;
+$color-body: #444;
 $color-primary: $blue;
 
 
 // Fonts
 // ---------------------------------------
 
-$font-primary: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+$font-primary: "Quicksand", "Roboto Condensed", "Hammersmith One", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+$font-heading: "Roboto Condensed", sans-serif;
+// $font-heading: "Abel", sans-serif;
+// $font-heading: "Quicksand", sans-serif;
+$font-heading: inherit, "Hammersmith One", sans-serif;
+
 $font-mono: monospace, serif;
 
 
@@ -22,4 +27,4 @@ $font-mono: monospace, serif;
 $spacing-horizontal: 20px;
 $spacing-vertical: 20px;
 
-$page-width: 1200px;
+$page-width: 640px;
