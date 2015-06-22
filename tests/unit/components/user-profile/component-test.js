@@ -19,13 +19,6 @@ const USER = User.create({
   socialLinks: SOCIALLINKS
 });
 
-test('template is rendered with 2 social links', function(assert) {
-  const component = this.subject({ user: USER });
-  const socialLinks = this.$().find('.social-link');
-
-  assert.equal(socialLinks.length, 2);
-});
-
 test('it sets and resets the currently hovered social link', function(assert) {
   const component = this.subject({ user: USER });
 

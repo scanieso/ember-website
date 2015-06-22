@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       SocialLink.create({ type: 'Github', username: 'scanieso' }),
       SocialLink.create({ type: 'LinkedIn', username: 'sarahcanieso' })
       ],
-      statement: 'a personal statement here'
+      statement: 'I am a front-end developer with a passion for both beautiful user experiences and beautiful developer experiences.'
     });
   }
 });

@@ -19,7 +19,6 @@ export default Ember.Component.extend({
   }),
 
   mouseEnter() {
-    console.log(this.get('socialLink'));
     this.sendAction('onMouseEnter', this.get('socialLink'));
   },
 
