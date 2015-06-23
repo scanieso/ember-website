@@ -18,7 +18,7 @@ test('visiting / displays user profile', function(assert) {
   visit('/');
 
   andThen(function() {
-    const name = find('.logo');
+    const name = find('.page-name');
     const socialLinks = find('.social-link');
 
     assert.equal(currentURL(), '/');
@@ -37,7 +37,7 @@ test('hovering social link updates visible name', function(assert) {
   });
 
   andThen(function() {
-    const name = find('.logo');
-    assert.equal(name.text(), '@sarahcanieso', 'name displays Twitter handle');
+    const name = find('.page-name');
+    assert.equal(name.text(), '@scanieso', 'name displays Twitter handle');
   });
 });

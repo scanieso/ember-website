@@ -1,8 +1,8 @@
 // Media Queries
 // ---------------------------------------
 
-@mixin bp ($bp, $range: max) {
-  @media all and (#{$range}-width: em($bp, 16)) {
+@mixin bp ($bp, $range: max, $dimension: width) {
+  @media all and (#{$range}-#{$dimension}: em($bp, 16)) {
     @content;
   }
 }

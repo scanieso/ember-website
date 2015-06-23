@@ -1,0 +1,29 @@
+.user-profile {
+  height: 100%;
+  padding: 20px 0;
+  text-align: center;
+
+  .container {
+    @include vertical-center;
+  }
+
+  @include bp(400) {
+    @include bp(300, $dimension: height) {
+      .container {
+        @include transform(none);
+        position: static;
+      }
+    }
+  }
+}
+
+.page-name {
+  @include transition(all 0.25s);
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: bottom;
+
+  &.is-hovered {
+    color: #aaa;
+  }
+}

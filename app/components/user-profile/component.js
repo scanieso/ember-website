@@ -1,13 +1,17 @@
 import Ember from 'ember';
 
-const { computed } = Ember;
+const { computed, isPresent } = Ember;
 
 export default Ember.Component.extend({
   activeSocial: null,
   user: undefined,
 
+  hasActiveSocial: computed('activeSocial', function() {
+    return isPresent(this.get('activeSocial'));
+  }),
+
   name: computed('activeSocial', function() {
-    if (Ember.isPresent(this.get('activeSocial'))) {
+    if (isPresent(this.get('activeSocial'))) {
       return this.get('activeSocial.handle');
     } else {
       return this.get('user.fullName');

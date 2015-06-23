@@ -13,22 +13,23 @@ $em-base: 16;
 @import "base/mixins";
 @import "base/responsive";
 
-@import "base/animations";
-@import "base/helpers";
-@import "base/icons";
-@import "base/grid";
+// @import "base/animations";
+// @import "base/form";
+// @import "base/form/button";
+// @import "base/form/input";
+// @import "base/form/select";
+// @import "base/grid";
+// @import "base/helpers";
+// @import "base/icons";
+@import "base/list";
+// @import "base/media";
+// @import "base/table";
 @import "base/typography";
 
-@import "module/footer";
-@import "module/form";
-@import "module/form/button";
-@import "module/form/input";
-@import "module/form/select";
-@import "module/header";
-@import "module/list";
-@import "module/media";
-@import "module/section";
-@import "module/table";
+@import "component/user-profile";
 
+// @import "layout/footer";
 @import "layout/global";
-@import "layout/z-index";
+// @import "layout/header";
+// @import "layout/section";
+// @import "layout/z-index";
