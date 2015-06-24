@@ -35,6 +35,10 @@ body {
   max-width: $page-width;
   min-width: 320px;
   padding: 0 40px;
+
+  @include bp(650) {
+    max-width: 500px;
+  }
 }
 
 img {

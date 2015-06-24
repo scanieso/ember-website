@@ -3,7 +3,7 @@ import Ember from 'ember';
 const { computed } = Ember;
 
 export default Ember.Object.extend({
-  handlePrefixes: {
+  _handlePrefixes: {
     Github: '@',
     LinkedIn: '/in/',
     Twitter: '@'
@@ -11,7 +11,7 @@ export default Ember.Object.extend({
 
   handle: computed('username', function() {
     const type = this.get('type');
-    const prefix = this.get('handlePrefixes')[type];
+    const prefix = this.get('_handlePrefixes')[type];
     const username = this.get('username');
 
     return prefix + username;

@@ -1,11 +1,11 @@
 <div class="container">
   <h1>
-    Hi! I'm <span class="page-name {{if hasActiveSocial "is-hovered"}}">{{liquid-bind name}}</span>, {{user.statement}}.
+    Hi! I'm <span class="nowrap"><span class="profile-name {{if hashoveredSocial "is-hovered"}}">{{name}}</span>,</span> {{user.statement}}.
   </h1>
 
   <ul class="social-links list-inline">
     {{#each user.socialLinks as |socialLink|}}
-      {{social-link class="social-link" onMouseEnter="setActiveSocial" onMouseLeave="resetActiveSocial" socialLink=socialLink tagName="li"}}
+    <li>{{social-link onMouseEnter="setHoveredSocial" onMouseLeave="resetHoveredSocial" socialLink=socialLink tagName="a"}}</li>
     {{/each}}
   </ul>
 </div>

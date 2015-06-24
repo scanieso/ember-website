@@ -3,28 +3,30 @@ import Ember from 'ember';
 const { computed, isPresent } = Ember;
 
 export default Ember.Component.extend({
-  activeSocial: null,
+  classNames: ['user-profile'],
+
+  hoveredSocial: null,
   user: undefined,
 
-  hasActiveSocial: computed('activeSocial', function() {
-    return isPresent(this.get('activeSocial'));
+  hashoveredSocial: computed('hoveredSocial', function() {
+    return isPresent(this.get('hoveredSocial'));
   }),
 
-  name: computed('activeSocial', function() {
-    if (isPresent(this.get('activeSocial'))) {
-      return this.get('activeSocial.handle');
+  name: computed('hoveredSocial', function() {
+    if (isPresent(this.get('hoveredSocial'))) {
+      return this.get('hoveredSocial.handle');
     } else {
       return this.get('user.fullName');
     }
   }),
 
   actions: {
-    setActiveSocial(socialLink) {
-      this.set('activeSocial', socialLink);
+    setHoveredSocial(socialLink) {
+      this.set('hoveredSocial', socialLink);
     },
 
-    resetActiveSocial() {
-      this.set('activeSocial', null);
+    resetHoveredSocial() {
+      this.set('hoveredSocial', null);
     }
   }
 });
