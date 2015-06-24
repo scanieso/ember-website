@@ -18,6 +18,15 @@
   }
 }
 
+@include bp(250, $dimension: height) {
+  .user-profile {
+    .container {
+      @include transform(none);
+      position: static;
+    }
+  }
+}
+
 @include bp(650) {
   .user-profile {
     .nowrap {
