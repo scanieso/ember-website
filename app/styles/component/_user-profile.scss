@@ -21,8 +21,8 @@
 @include bp(250, $dimension: height) {
   .user-profile {
     .container {
-      @include transform(none);
       position: static;
+      transform: none;
     }
   }
 }
@@ -35,8 +35,8 @@
 
     @include bp(420, $dimension: height) {
       .container {
-        @include transform(none);
         position: static;
+        transform: none;
       }
     }
   }
