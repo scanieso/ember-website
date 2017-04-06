@@ -1,6 +1,12 @@
 <div class="container">
   <h1>
-    Hi! I'm <span class="nowrap"><span class="profile-name {{if hashoveredSocial "is-hovered"}}">{{name}}</span>,</span> {{user.statement}}.
+    Hi! I'm
+    <span class="nowrap">
+      <span class="profile-name {{if hasHoveredSocial "is-hovered"}}">
+        {{name~}}
+      </span>,
+    </span>
+    {{user.statement}}.
   </h1>
 
   <ul class="social-links list-inline">

@@ -1,18 +1,9 @@
 // Typography
 // ---------------------------------------
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
+  @include font-size(46);
   @include vertical-rhythm;
-}
-
-h1,
-.text-h1 {
-  @include font-size(42);
   font-weight: normal;
 
   @include bp($bp-lg) {
@@ -23,49 +14,6 @@ h1,
     @include font-size(30);
   }
 }
-
-h2,
-.text-h2 {
-  // @include font-size(24);
-}
-
-h3,
-.text-h3 {
-  // @include font-size(20);
-}
-
-h4,
-.text-h4 {
-  // @include font-size(18);
-}
-
-h5,
-.text-h5 {
-  // @include font-size(17);
-}
-
-h6,
-.text-h6 {
-  // @include font-size(16);
-}
-
-// p {
-//   @include vertical-rhythm;
-// }
-
-// ul,
-// ol {
-//   @include vertical-rhythm;
-
-//   ul,
-//   ol {
-//     @include vertical-rhythm($spacing-vertical/2);
-//   }
-// }
-
-// li {
-//   @include vertical-rhythm($spacing-vertical/2);
-// }
 
 a {
   color: $color-primary;

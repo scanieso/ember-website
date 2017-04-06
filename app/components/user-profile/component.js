@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   hoveredSocial: null,
   user: undefined,
 
-  hashoveredSocial: computed('hoveredSocial', function() {
+  hasHoveredSocial: computed('hoveredSocial', function() {
     return isPresent(this.get('hoveredSocial'));
   }),
 

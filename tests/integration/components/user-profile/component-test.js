@@ -29,8 +29,8 @@ test('it updates the profile name', function(assert) {
   const $name = this.$('.user-profile .profile-name');
 
   this.$('.social-link:eq(0)').trigger('mouseover');
-  assert.equal($name.text(), '@hp_wizard');
+  assert.equal($name.text().trim(), '@hp_wizard');
 
   this.$('.social-link:eq(0)').trigger('mouseout');
-  assert.equal($name.text(), 'Harry Potter');
+  assert.equal($name.text().trim(), 'Harry Potter');
 });

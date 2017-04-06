@@ -1,46 +1,18 @@
 .user-profile {
-  height: 100%;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
   text-align: center;
-
-  .container {
-    @include vertical-center;
-  }
 }
 
 .profile-name {
-  display: inline-block;
-  vertical-align: bottom;
-  white-space: nowrap;
-
   &.is-hovered {
     color: #aaa;
   }
 }
 
-@include bp(250, $dimension: height) {
-  .user-profile {
-    .container {
-      position: static;
-      transform: none;
-    }
-  }
-}
-
 @include bp(650) {
-  .user-profile {
-    .nowrap {
-      display: block;
-    }
-
-    @include bp(420, $dimension: height) {
-      .container {
-        position: static;
-        transform: none;
-      }
-    }
-  }
-
   .social-links {
     > li {
       display: block;

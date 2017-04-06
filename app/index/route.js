@@ -8,11 +8,11 @@ export default Ember.Route.extend({
       firstName: 'Sarah',
       lastName: 'Canieso',
       socialLinks: [
-      SocialLink.create({ type: 'Github', username: 'scanieso' }),
-      SocialLink.create({ type: 'LinkedIn', username: 'scanieso' }),
-      SocialLink.create({ type: 'Twitter', username: 'scanieso' })
+        SocialLink.create({ type: 'Github', username: 'scanieso' }),
+        SocialLink.create({ type: 'LinkedIn', username: 'scanieso' }),
+        SocialLink.create({ type: 'Twitter', username: 'scanieso' })
       ],
-      statement: 'senior front-end developer at Fresh Tilled Soil'
+      statement: 'web developer at Society of Grownups'
     });
   }
 });
