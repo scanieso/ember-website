@@ -2,7 +2,7 @@
 // ---------------------------------------
 
 $bp-lg: 875;
-$bp-md: 600;
+$bp-md: 660;
 
 @mixin bp ($bp, $range: max, $dimension: width) {
   @media all and (#{$range}-#{$dimension}: em($bp, 16)) {

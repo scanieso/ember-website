@@ -1,18 +1,19 @@
 import Ember from 'ember';
 
-const { computed, isPresent } = Ember;
+const {
+  computed,
+  computed: { bool },
+  isPresent
+} = Ember;
 
 export default Ember.Component.extend({
   classNames: ['user-profile'],
 
+  hasHoveredSocial: bool('hoveredSocial'),
   hoveredSocial: null,
   user: undefined,
 
-  hasHoveredSocial: computed('hoveredSocial', function() {
-    return isPresent(this.get('hoveredSocial'));
-  }),
-
-  name: computed('hoveredSocial', function() {
+  displayName: computed('hoveredSocial', function() {
     if (isPresent(this.get('hoveredSocial'))) {
       return this.get('hoveredSocial.handle');
     } else {

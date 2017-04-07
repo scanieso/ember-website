@@ -12,7 +12,13 @@
   }
 }
 
-@include bp(650) {
+@include bp($bp-md) {
+  .user-profile {
+    br {
+      display: none;
+    }
+  }
+
   .social-links {
     > li {
       display: block;

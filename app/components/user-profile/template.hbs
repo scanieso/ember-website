@@ -1,17 +1,25 @@
 <div class="container">
-  <h1>
+  <h1 data-test="heading">
     Hi! I'm
     <span class="nowrap">
-      <span class="profile-name {{if hasHoveredSocial "is-hovered"}}">
-        {{name~}}
+      <span class="profile-name {{if hasHoveredSocial "is-hovered"}}"
+        data-test="display-name">
+        {{~displayName~}}
       </span>,
     </span>
-    {{user.statement}}.
+    <span data-test="job-title">{{~user.job.title}}</span><br>
+    at <span data-test="job-company">{{user.job.company}}</span>.
   </h1>
 
   <ul class="social-links list-inline">
     {{#each user.socialLinks as |socialLink|}}
-    <li>{{social-link onMouseEnter="setHoveredSocial" onMouseLeave="resetHoveredSocial" socialLink=socialLink tagName="a"}}</li>
+      <li>
+        {{social-link
+          onMouseEnter="setHoveredSocial"
+          onMouseLeave="resetHoveredSocial"
+          socialLink=socialLink
+          tagName="a"}}
+      </li>
     {{/each}}
   </ul>
 </div>
